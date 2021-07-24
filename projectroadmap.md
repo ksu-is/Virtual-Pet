@@ -4,7 +4,7 @@ The code of codebase I had gotten the idea from seems to slightly faulty, the fo
 
 Sprint 1 requirments:
 
-Join KSU-IS github team
-Find prior Read.me and project roadmap documents as examples
-Create Read.me
-Create project roadmap document
+Join KSU-IS github team:
+Find prior Read.me and project roadmap documents as examples:
+Create Read.me:
+Create project roadmap document:
