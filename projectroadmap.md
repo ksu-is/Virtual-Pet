@@ -8,3 +8,13 @@ Sprint 1 requirments:
 - [x] Find prior Read.me and project roadmap documents as examples
 - [x] Create Read.me
 - [x] Create project roadmap document
+- [x] Create Liscense
+
+
+Sprint 2 requirments: 
+
+- [] Rework the code 
+- [] Create input for petgame
+- [] Write Basecode
+- [] Update Basecode
+- [] Clean up duplicates
