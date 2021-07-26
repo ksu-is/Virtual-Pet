@@ -20,9 +20,10 @@ def virtpet ():
     
     pet["type"] = pettype
 
-    pet["name"] = input("What would you like to name your" + pet["type"] + "?")
+    pet["name"] = input("What would you like to name your" + pet["type"] + "? ")
 
     print(pet)
 
 virtpet()
 #this initializes the pet game
+#then it should ask you to choose and name your pet if its working correctly
