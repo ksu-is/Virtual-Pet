@@ -18,7 +18,11 @@ def virtpet ():
             print(option)
         pettype = input("Please select from one of these pets: ")
     
-    print(pettype)
+    pet["type"] = pettype
+
+    pet["name"] = input("What would you like to name your" + pet["type"] + "?")
+
+    print(pet)
 
 virtpet()
-
+#this initializes the pet game
