@@ -20,30 +20,37 @@ def virtpet ():
     
     pet["type"] = pettype
 
-    pet["name"] = input("What would you like to name your" + pet["type"] + "? ")
+    pet["name"] = input("What would you like to name your " + pet["type"] + "? ")
 
 #this initializes the pet game
 #then it should ask you to choose and name your pet if its working correctly
+
+#Not only write a while loop but lets the user quit by hitting the q key
+
+def printmenu(menuops):
+    optionkeys = list(menuops.keys())
+
+    print("Here are your options: ")
+    print("----------")
+    
+    for key in optionkeys:
+        print(key + ":\t" + menuops[key]["text"])
+    print()
+
+#bug fix, not only was feedpet and quitsim not defined but once I defined it I could not get printmenu to show, just getting a long string of letters and numbers
 
 def quitsim():
     print("By for now!")
 
 def feedpet():
-    print("Fed" + pet["name"])
+    print("Fed your pet!")
 
-
-
-def printMenu(menuops):
-    optionkeys = list(menuops.keys())
-    print("Here are your options: ")
-    print("----------")
-    for key in optionkeys:
-        print(key + ":\t" + menuops[key]["text"])
 
 def main():
     virtpet()
 
     menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed" + pet["name"] } }
+
     keepplaying = True
     while keepplaying:
         menuselect = ""
@@ -53,5 +60,6 @@ def main():
         if menuselect == "Q":
             keepplaying = False 
 
-    menuops[menuselect]["function"]()
+        menuops[menuselect]["function"]()
+
 main()
