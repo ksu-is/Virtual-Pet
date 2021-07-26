@@ -7,6 +7,12 @@ pet = {"name":"", "type": "", "age": 0, "hunger": 0, "toys": []}
 
 pettoys = {"cat": ["String", "Cardboard Box", "Scratching Post"], "dog": ["Frisbee","Tennis Ball", "Stick"], "fish": ["Undersea Castle", "Buried Treasure", "Coral"]}
 
+def quitsim():
+  print("That's the end of the game! Thank you for playing the pet simulator!") 
+
+def feedpet():
+    print("Fed pet")
+
 def virtpet ():
     pettype = ""
 
@@ -28,28 +34,32 @@ def virtpet ():
 #Not only write a while loop but lets the user quit by hitting the q key
 
 def printmenu(menuops):
-    optionkeys = list(menuops.keys())
-
+    print()
     print("Here are your options: ")
     print("----------")
-    
-    for key in optionkeys:
+
+    for key in menuops:
         print(key + ":\t" + menuops[key]["text"])
     print()
 
 #bug fix, not only was feedpet and quitsim not defined but once I defined it I could not get printmenu to show, just getting a long string of letters and numbers
 
-def quitsim():
-    print("By for now!")
 
-def feedpet():
-    print("Fed your pet!")
+def printStats():
+  print()
+  print("Your " + pet["type"] + " named " + pet["name"] + " had a great time playing with you!")
+  print(pet["name"] + " is " + str(pet["age"]) + " days old")
+  print(pet["name"] + " is currently at a hunger level of " + str(pet["hunger"]) + " out of 100!")
+  print("You have " + str(len(pet["toys"])) + " toys! They are: ")
+  for toy in pet["toys"]:
+    print(toy)
+  print() 
 
 
 def main():
     virtpet()
 
-    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed" + pet["name"] } }
+    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"}, "G": { "function": gettoy, "text": "Get a toy for " + pet["name"] + "!"}, "P": { "function": playtoys, "text": "Play with " + pet["name"] + " and your toys!"} }
 
     keepplaying = True
     while keepplaying:
