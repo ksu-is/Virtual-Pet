@@ -22,8 +22,36 @@ def virtpet ():
 
     pet["name"] = input("What would you like to name your" + pet["type"] + "? ")
 
-    print(pet)
-
-virtpet()
 #this initializes the pet game
 #then it should ask you to choose and name your pet if its working correctly
+
+def quitsim():
+    print("By for now!")
+
+def feedpet():
+    print("Fed" + pet["name"])
+
+
+
+def printMenu(menuops):
+    optionkeys = list(menuops.keys())
+    print("Here are your options: ")
+    print("----------")
+    for key in optionkeys:
+        print(key + ":\t" + menuops[key]["text"])
+
+def main():
+    virtpet()
+
+    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed" + pet["name"] } }
+    keepplaying = True
+    while keepplaying:
+        menuselect = ""
+        while menuselect not in menuops.keys():
+            print(menuops)
+            menuselect = input("Which of thesee menu options would you like to use? ").upper()
+        if menuselect == "Q":
+            keepplaying = False 
+
+    menuops[menuselect]["function"]()
+main()
