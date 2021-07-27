@@ -34,6 +34,10 @@ def gettoy():
   pet["toys"].append(chosenToy)
   print("Nice! You chose: " + chosenToy + " for " + pet["name"] + ". Great pick!")
 
+def playtoys():
+  print("Yay! Let's play with our toys.")
+  pet["playfulness"] += 10
+
 def virtpet ():
     pettype = ""
 
@@ -66,7 +70,7 @@ def printmenu(menuops):
 #bug fix, not only was feedpet and quitsim not defined but once I defined it I could not get printmenu to show, just getting a long string of letters and numbers
 
 
-def printStats():
+def printstats():
   print()
   print("Your " + pet["type"] + " named " + pet["name"] + " had a great time playing with you!")
   print(pet["name"] + " is " + str(pet["age"]) + " days old")
@@ -95,5 +99,5 @@ def main():
             keepplaying = False 
 
         menuops[menuselect]["function"]()
-
+        printstats()
 main()
