@@ -17,6 +17,23 @@ def feedpet():
     pet["hunger"] = newHunger
     print("Fed pet, their hunger is getting out of control")
 
+def gettoy():
+  toyChoices = pettoys[pet["type"]]
+  toyNum = -1
+  while toyNum < 0 or toyNum >= len(pettoys):
+    print("Here are your toy choices: ")
+    for i in range(len(toyChoices)):
+      print(str(i) + ": " + toyChoices[i])
+    
+    toyNum = int(input("Please input your choice of pet toy: "))
+  
+  
+  chosenToy = toyChoices[toyNum]
+
+  
+  pet["toys"].append(chosenToy)
+  print("Nice! You chose: " + chosenToy + " for " + pet["name"] + ". Great pick!")
+
 def virtpet ():
     pettype = ""
 
