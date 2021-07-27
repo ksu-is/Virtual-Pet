@@ -54,19 +54,21 @@ def printStats():
   for toy in pet["toys"]:
     print(toy)
   print() 
-
+#added stats, pushed pass earlier error, will work on that later once I find a solution
 
 def main():
     virtpet()
 
-    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"}, "G": { "function": gettoy, "text": "Get a toy for " + pet["name"] + "!"}, "P": { "function": playtoys, "text": "Play with " + pet["name"] + " and your toys!"} }
+    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"} }
 
     keepplaying = True
     while keepplaying:
         menuselect = ""
-        while menuselect not in menuops.keys():
-            print(menuops)
+        menuopskeys = list(menuops.keys())
+        while menuselect not in menuopskeys:
+            printmenu(menuops)
             menuselect = input("Which of thesee menu options would you like to use? ").upper()
+            print()
         if menuselect == "Q":
             keepplaying = False 
 
