@@ -11,8 +11,11 @@ def quitsim():
   print("That's the end of the game! Thank you for playing the pet simulator!") 
 
 def feedpet():
-    
-    print("Fed pet")
+    newHunger = pet["hunger"] - 10
+    if newHunger < 0:
+        newHunger = 0
+    pet["hunger"] = newHunger
+    print("Fed pet, their hunger is getting out of control")
 
 def virtpet ():
     pettype = ""
