@@ -11,6 +11,7 @@ def quitsim():
   print("That's the end of the game! Thank you for playing the pet simulator!") 
 
 def feedpet():
+    
     print("Fed pet")
 
 def virtpet ():

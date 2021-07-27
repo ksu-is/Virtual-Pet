@@ -13,8 +13,10 @@ Sprint 1 requirments:
 
 Sprint 2 requirments: 
 
-- [] Rework the code 
-- [] Create input for petgame
-- [] Write Basecode
-- [] Update Basecode
-- [] Clean up duplicates
+- [x] Rework the code 
+- [x] Create input for petgame
+- [x] Write Basecode
+- [x] Update Basecode
+- [x] Clean up duplicates
+- [x] Fix error that was causing feed pet to break
+- [x] Add more pieces to code
