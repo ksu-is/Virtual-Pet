@@ -80,7 +80,8 @@ def printStats():
 def main():
     virtpet()
 
-    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"} }
+    menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"}, "G": { "function": gettoy, "text": "Get a toy for " + pet["name"] + "!"}, "P": { "function": playtoys, "text": "Play with " + pet["name"] + " and your toys!"} }
+
 
     keepplaying = True
     while keepplaying:
