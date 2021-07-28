@@ -20,3 +20,11 @@ Sprint 2 requirments:
 - [x] Clean up duplicates
 - [x] Fix error that was causing feed pet to break
 - [x] Add more pieces to code
+
+
+Sprint 3 requiments:
+
+- [x] Final code adjustments
+- [x] Finish engagements
+- [x] Make powerpoint slide
+- [x] Keep working towards the future
