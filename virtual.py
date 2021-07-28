@@ -3,7 +3,7 @@
 #give toys, feed pet, let game loop, while printing menu
 
 
-pet = {"name":"", "type": "", "age": 0, "hunger": 0, "toys": []}
+pet = {"name":"", "type": "", "age": 0, "hunger": 0, "playfulness" : 0, "toys": []}
 
 pettoys = {"cat": ["String", "Cardboard Box", "Scratching Post"], "dog": ["Frisbee","Tennis Ball", "Stick"], "fish": ["Undersea Castle", "Buried Treasure", "Coral"]}
 
@@ -38,7 +38,7 @@ def playtoys():
   print("Yay! Let's play with our toys.")
   pet["playfulness"] += 10
 
-def virtpet ():
+def virtpet (pettoys):
     pettype = ""
 
     petops = list(pettoys.keys())
@@ -82,7 +82,7 @@ def printstats():
 #added stats, pushed pass earlier error, will work on that later once I find a solution
 
 def main():
-    virtpet()
+    virtpet(pettoys)
 
     menuops = {"Q": { "function": quitsim, "text": "Quit the game"}, "F": { "function": feedpet, "text": "Feed " + pet["name"] + "!"}, "G": { "function": gettoy, "text": "Get a toy for " + pet["name"] + "!"}, "P": { "function": playtoys, "text": "Play with " + pet["name"] + " and your toys!"} }
 
@@ -97,6 +97,9 @@ def main():
             print()
         if menuselect == "Q":
             keepplaying = False 
+
+        pet["hunger"] += 3
+        pet["age"] += 1
 
         menuops[menuselect]["function"]()
         printstats()
